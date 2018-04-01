@@ -2,7 +2,7 @@
 TradeOgre REST API wrapper module for Node.js
 
 The code is self explanatory, for further details please refer to the TradeOgre API documentation.
-Check out example.js for a list of all possible calls.
+Check out examples.js for a list of all possible calls.
 
 ## Installation
 ```
