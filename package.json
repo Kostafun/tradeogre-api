@@ -4,7 +4,6 @@
   "description": "TradeOgre REST API wrapper",
   "main": "index.js",
   "scripts": {
-    "test": "\"node test.js\""
   },
   "repository": {
     "type": "git",

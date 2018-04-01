@@ -82,7 +82,7 @@ TradeOgre.prototype.buy = function (market, quantity, price, callback) {
 	 */
 	this._post('/order/buy', { market : market, quantity: quantity, price: price }, callback)
 }
-TradeOgre.prototype.sell = function () {
+TradeOgre.prototype.sell = function (market, quantity, price, callback) {
 	/**
 	 * @param market
 	 * @param quantity
@@ -90,7 +90,7 @@ TradeOgre.prototype.sell = function () {
 	 */
 	this._post('/order/sell', { market : market, quantity: quantity, price: price }, callback)
 }
-TradeOgre.prototype.cancelOrder = function () {
+TradeOgre.prototype.cancelOrder = function (uuid, callback) {
 	/**
 	 * @param uuid
 	 */
