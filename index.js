@@ -2,7 +2,7 @@ var request = require('request')
 
 var TradeOgre = function (key, secret) {
 
-	this.VERSION = '1.0.0'
+	this.VERSION = '1.1.0'
 
 	this._key = key
 	this._secret = secret
