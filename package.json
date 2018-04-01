@@ -1,0 +1,23 @@
+{
+  "name": "tradeogre-api",
+  "version": "1.0.0",
+  "description": "TradeOgre REST API wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"node test.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pollodigomma/tradeogre-api.git"
+  },
+  "keywords": [
+    "TradeOgre",
+    "tradeogre.com"
+  ],
+  "author": "Andrea Zitti <andrea.zitti@outlook.com>",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/pollodigomma/tradeogre-api/issues"
+  },
+  "homepage": "https://github.com/pollodigomma/tradeogre-api#readme"
+}
