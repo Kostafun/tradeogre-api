@@ -2,24 +2,26 @@ var request = require('request')
 
 var TradeOgre = function (key, secret) {
 
-	this.VERSION = '1.1.0'
+	var self = this
 
-	this._key = key
-	this._secret = secret
+	self.VERSION = '1.1.1'
 
-	this._endpoint = 'tradeogre.com/api/v1'
-	this._publicUrl = 'https://' + this._endpoint
-	this._privateUrl = 'https://' + this._key + ":" + secret + "@" + this._endpoint
+	self._key = key
+	self._secret = secret
 
-	this._request = function (method, path, options, callback) {
+	self._endpoint = 'tradeogre.com/api/v1'
+	self._publicUrl = 'https://' + self._endpoint
+	self._privateUrl = 'https://' + self._key + ":" + self._secret + "@" + self._endpoint
+
+	self._request = function (method, path, options, callback) {
 		if (method === 'GET') {
-			return this._get(path, options, callback)
+			return self._get(path, options, callback)
 		}
 		if (method === 'POST') {
-			return this._post(path, options, callback)
+			return self._post(path, options, callback)
 		}
 	}
-	this._get = function (path, options, callback) {
+	self._get = function (path, options, callback) {
 		var qs = ''
 		for (var o in options) {
 			qs += '/' + options[o]
@@ -27,16 +29,16 @@ var TradeOgre = function (key, secret) {
 		return request(
 			{
 				method: "GET",
-				url: this._publicUrl + path + qs
+				url: self._publicUrl + path + qs
 			},
 			callback
 		)
 	}
-	this._post = function (path, options, callback) {
+	self._post = function (path, options, callback) {
 		return request(
 			{
 				method: "POST",
-				url: this._privateUrl + path,
+				url: self._privateUrl + path,
 				form: options,
 				json: true
 			},
@@ -44,7 +46,7 @@ var TradeOgre = function (key, secret) {
 		)
 	}
 
-	return this
+	return self
 }
 
 // Public methods
